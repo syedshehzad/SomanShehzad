@@ -3,52 +3,64 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .container {
     text-align: center;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
-#image-display {
-    width: 250px;
-    height: 250px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+#main-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-h1 {
-    color: #d63384;
-    font-size: 2.5rem;
+#hero-gif {
+    width: 320px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 1.25rem;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    position: relative;
+.poem {
+  max-width: 720px;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+  line-height: 1.55;
+  font-size: 1.15rem;
+  color: #7a1f52;
+  padding: 0 1rem;
 }
 
-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
+.poem p {
+  margin: 0.35rem 0;
 }
 
-#yesButton {
-    background-color: #4CAF50;
-    color: white;
+.poem .closing {
+  margin-top: 0.75rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: inline-block;
 }
 
-#noButton {
-    background-color: #f44336;
-    color: white;
-    position: absolute; /* This allows it to move around */
-    left: 150px;
+.heart {
+  color: #e03131;
+  margin-left: 0.35rem;
+  font-size: 1.1em;
+}
+
+/* Ensure legacy button styles are hidden if present */
+.buttons, #yesButton, #noButton {
+  display: none !important;
 }
